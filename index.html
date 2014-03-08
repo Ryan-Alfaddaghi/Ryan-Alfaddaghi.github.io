@@ -30,10 +30,219 @@
     </ul>
 </div>
 <div id="repo_content"></div>
-<pre><code class>
+<pre><code class="language-css">
 p { color : red}
 
  </code> </pre>
+ 
+ <code>
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Nord Scheduler</title>
+
+    <link href="styles/kendo.common.min.css" rel="stylesheet">
+    <link href="styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="styles/kendo.default.min.css" rel="stylesheet">
+    <link href="styles/NordScheduler.min.css" rel="stylesheet" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.web.min.js"></script>
+    <script src="js/console.js"></script>
+    <script src="js/cultures/kendo.culture.ar.min.js"></script>
+    <script src="js/cultures/kendo.culture.ar-SA.min.js"></script>
+</head>
+<body>
+    <!--        <script type="text/javascript">
+        kendo.culture("ar-SA");
+</script>-->
+
+
+
+    <div class="k-content" id="container">
+        <div class="k-rtl n-filter" id="employee">
+            <input name="Abdulmajeed" checked type="checkbox" id="Abdulmajeed" value="1">
+            <label for="Abdulmajeed" class="k-button n-abdulmajeed">ÚÈÏÇáãÌíÏ</label>
+            <input checked type="checkbox" id="Zahid" value="2" name="Zahid">
+            <label for="Zahid" class="k-button n-zahid">ÒÇåÏ</label>
+            <input checked type="checkbox" id="Mohammed" value="3" name="Mohammed">
+            <label for="Mohammed" class="k-button n-mohammed">ãÍãÏ</label>
+            <input checked type="checkbox" id="MohammedSalam" value="4" name="MohammedSalam">
+            <label for="MohammedSalam" class="k-button n-mohammedSalam">ãÍãÏ ÚÈÏÇáÓáÇã</label>
+        </div>
+        <div class="k-rtl">
+            <div id="scheduler"></div>
+        </div>
+    </div>
+    <script id="editor" type="text/x-kendo-template">
+      <form id="EventForm" class="k-edit-form-container" data-role="validator">
+            <div class="k-edit-label" <label>ÇÓã ÇáÚãíá </label></div>
+            <div class="k-edit-field"><input data-role="autocomplete" name="title" required="required" validationMessage="ÇáÑÌÇÁ ÇÏÎÇá ÇÓã ÇáÚãíá" /></div>
+            <div class="k-edit-label"><label>ãä ÇáÓÇÚÉ </label></div>
+            <div class="k-edit-field"><input data-role="datetimepicker" name="start" /></div>
+            <div class="k-edit-label"><label>Çáì ÇáÓÇÚÉ </label></div>
+            <div class="k-edit-field"><input data-role="datetimepicker" name="end" /></div>
+            <div class="k-edit-label"> <label>ÇáæÕÝ </label></div>
+            <div class="k-edit-field"><textarea name="description" class="k-textbox" data-bind="value:description"></textarea></div>
+            <div class="k-edit-label"><label name="cellNumber">ÑÞã ÇáÌæÇá</label></div>
+            <div class="k-edit-field"><input data-role="autocomplete" name="cellNumber"></div> 
+            <div class="k-edit-label"><label name="Qty">ÇáßãíÉ</label></div>
+            <div class="k-edit-field"><input name="Qty" data-role="numerictextbox" data-min="0" data-format="0 ßíÓ" required="required" validationMessage="ÇáÑÌÇÁ ÇÏÎÇá ÇáßãíÉ" /></div>
+            <div class="k-edit-label"><label name="type">ÇáäæÚ</label></div>
+            <div class="k-edit-field"><input data-role="dropdownlist" name="type" /></div>
+            <div class="k-edit-label"><label name="driver">ÇáãæÙÝ</label></div>
+            <div class="k-edit-field"><select data-role="dropdownlist" data-template="Driver" name="driver" data-source="Drivers" data-text-field="text" data-value-field="value"></select></div>
+            <div class="k-edit-label"><label name="delivered">Êã ÇáÊæÕíá</label></div>
+            <div class="k-edit-field"><input name="delivered" type="checkbox" /></div>
+         </form>  
+    </script>
+    <script id="Driver" type="text/x-kendo-template">
+        <span class="k-scheduler-mark" style="background: #: data.color #"></span><span>#: data.text #</span>
+    </script>
+        <script id="test" type="text/x-kendo-template">
+        <span class="k-scheduler-mark" style="background: #: data.color #"></span><span>#: data.text #</span>
+    </script>
+    <script>
+        var Drivers = new kendo.data.DataSource({
+            data: [{ text: "ÚÈÏÇáãÌíÏ", value: 1, color: "#f8a398" },
+                   { text: "ÒÇåÏ", value: 2, color: "#51a0ed" },
+                   { text: "ãÍãÏ", value: 3, color: "#56ca85" },
+                   { text: "ãÍãÏ ÚÈÏÇáÓáÇã", value: 4, color: "#568885" }, ]
+        });
+    </script>
+    <!--<script>
+        var container = $("#ownerId");
+        function dropDownResourceEditor(resource) {
+            return function (container) {
+                $(kendo.format('<select data-{0}bind="value:{1}">', kendo.ns, resource.field))
+                  .appendTo(container)
+                $("#ownerId").kendoDropDownList({
+                    dataTextField: resource.dataTextField,
+                    dataValueField: resource.dataValueField,
+                    dataSource: resource.dataSource,
+                    valuePrimitive: resource.valuePrimitive,
+                    optionLabel: "None",
+                    template: kendo.format('<span class="k-scheduler-mark" style="background-color:#= data.{0}?{0}:"none" #"></span>#={1}#', resource.dataColorField, resource.dataTextField)
+                });
+            };
+        }
+
+    </script>-->
+    <script>
+        $(function () {
+            $("#scheduler").kendoScheduler({
+                date: new Date("2013/6/13"),
+                startTime: new Date("2013/6/13 04:00 AM"),
+                height: 600,
+                allDaySlot: false,
+                editable: {
+                    template: $("#editor").html(),
+                },
+                messages: {
+                    editor: {
+                        editorTitle: "ÇÖÝ ØáÈ ÊæÕíá",
+                    }
+                },
+                views: [
+                "day",
+                    { type: "week", selected: true },
+                    "month",
+                    "agenda"
+                ],
+                timezone: "Etc/UTC",
+                dataSource: {
+                    batch: true,
+                    transport: {
+                        read: {
+                            url: "http://demos.kendoui.com/service/tasks",
+                            dataType: "jsonp"
+                        },
+                        update: {
+                            url: "http://demos.kendoui.com/service/tasks/update",
+                            dataType: "jsonp"
+                        },
+                        create: {
+                            url: "http://demos.kendoui.com/service/tasks/create",
+                            dataType: "jsonp"
+                        },
+                        destroy: {
+                            url: "http://demos.kendoui.com/service/tasks/destroy",
+                            dataType: "jsonp"
+                        },
+                        parameterMap: function (options, operation) {
+                            if (operation !== "read" && options.models) {
+                                return { models: kendo.stringify(options.models) };
+                            }
+                        }
+                    },
+                    schema: {
+                        model: {
+                            id: "taskId",
+                            fields: {
+                                taskId: { from: "TaskID", type: "number" },
+                                title: { from: "Title", validation: { required: true } },
+                                start: { type: "date", from: "Start" },
+                                end: { type: "date", from: "End" },
+                                startTimezone: { from: "StartTimezone" },
+                                endTimezone: { from: "EndTimezone" },
+                                description: { from: "Description" },
+                                ownerId: { from: "OwnerID", },
+                                qty: { from: "Qty" },
+                            }
+                        }
+                    },
+                    filter: {
+                        logic: "or",
+                        filters: [
+                            { field: "ownerId", operator: "eq", value: 1 },
+                            { field: "ownerId", operator: "eq", value: 2 }
+                        ]
+                    }
+                },
+                resources: [
+                    {
+                        field: "ownerId",
+                        title: "Owner",
+                        dataSource: [
+                            { text: "Abdulmajeed", value: 1, color: "#f8a398" },
+                            { text: "Zahid", value: 2, color: "#51a0ed" },
+                            { text: "Mohammed", value: 3, color: "#56ca85" },
+                            { text: "Mohammed Salam", value: 4, color: "#568885" },
+
+                        ]
+
+                    }
+                ]
+            });
+
+            $("#employee :checkbox").change(function (e) {
+                var checked = $.map($("#employee :checked"), function (checkbox) {
+                    return parseInt($(checkbox).val());
+                });
+
+                var filter = {
+                    logic: "or",
+                    filters: $.map(checked, function (value) {
+                        return {
+                            operator: "eq",
+                            field: "ownerId",
+                            value: value
+                        };
+                    })
+                };
+
+                var scheduler = $("#scheduler").data("kendoScheduler");
+
+                scheduler.dataSource.filter(filter);
+            });
+        });
+    </script>
+    <script>
+        kendo.init($("#container"));
+    </script>
+</body>
+</html>
+< /code>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
