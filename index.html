@@ -1,53 +1,462 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+﻿<!doctype html>
+<html lang="en">
+<head>
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta charset="utf-8" />
+    <title>Ryan Alfaddaghi - Github</title>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/prism.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-		
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-		<div id="repos">
-    <ul id="repo_list">
-    </ul>
-</div>
-<div id="repo_content"></div>
+    <meta name="description" content="155 characters of message matching text with a call to action goes here" />
 
-This is prism
-<pre><code class="language-css">
-p { color : red}
+    <meta name="keywords" content="responsive, metro, template, metromega, grozav" />
 
- </code> </pre>
- This is prism too
- <pre><code class="language-c#">
- public int sam = 2
- bla bla
-</code></pre>
+    <link rel="author" href="https://plus.google.com/yourpersonalprofile" />
 
-This is Github Gist
-<script src="https://gist.github.com/Ryan-Alfaddaghi/383a9c7c371c2006b4a2.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-		<script src="js/prism.js"> </script>
-    </body>
+    <link rel="publisher" href="https://plus.google.com/yourbusinessprofile" />
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css" />
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <!-- Scripts are at the bottom of the page -->
+
+</head>
+<body>
+
+    <!-- BACKGROUND -->
+    <img src="img/background-1.jpg" class="background" alt="" />
+    <!-- /BACKGROUND -->
+    <!-- LOGO -->
+    <div class="header">
+        <h1>
+            <a data-scroll="scrollto" href="#start">
+                <img src="img/headerlogo.png" height="32" width="35" class="header-logo" alt="" />
+                Ryan Alfaddaghi
+            </a>
+        </h1>
+    </div>
+    <!-- /LOGO -->
+    <!-- MAIN CONTENT SECTION -->
+    <section id="content">
+
+        <!-- SECTION -->
+        <section class="clearfix section" id="start">
+
+            <!-- SECTION TITLE -->
+            <h3 class="block-title">Welcome</h3>
+            <!-- /SECTION TITLE -->
+            <!-- SECTION TILES -->
+            <div class="tile turquoise w2 h1 title-horizontalcenter icon-scaleuprotate360cw">
+                <a class="link" href="https://github.com/Ryan-Alfaddaghi">
+                    <i class="fa fa-github-alt"></i>
+                    <p class="title">GitHub</p>
+                </a>
+            </div>
+
+            <div class="tile orange w2 h1 icon-featurecw title-fadeout">
+                <a data-scroll="scrollto" href="#about" class="link">
+                    <i class="fa fa-user"></i>
+                    <p class="title">About</p>
+                </a>
+            </div>
+
+            <div class="tile blue title-verticalcenter icon-flip w2 h1">
+                <a class="link" data-scroll="scrollto" href="#portfolio">
+                    <i class="fa fa-picture-o"></i>
+                    <p class="title">Portfolio</p>
+                </a>
+            </div>
+
+            <div class="tile purple title-scaleup icon-scaledownrotate360cw w2 h1">
+                <a class="link" data-scroll="scrollto" href="#contactform">
+                    <i class="fa fa-envelope"></i>
+                    <p class="title">Contact</p>
+                </a>
+            </div>
+
+            <div class="tile green icon-featurefade title-indent w1 h1">
+                <a class="link" href="https://twitter.com/RyanAlfaddaghi">
+                    <i class="fa fa-twitter"></i>
+                    <p class="title">Twitter</p>
+                </a>
+            </div>
+
+            <div class="tile blue icon-flip title-fadeout w1 h1">
+                <a class="link" data-scroll="scrollto" href="http://www.linkedin.com/pub/ryan-alfaddaghi/78/328/61a">
+                    <i class="fa fa-linkedin"></i>
+                    <p class="title">Linked In</p>
+                </a>
+            </div>
+            <div class="tile turquoise icon-fadeoutscaleup title-fade w1 h1">
+                <a class="link" data-scroll="scrollto" href="http://robertsouls.blogspot.com/">
+                    <i class="fa fa-bold"></i>
+                    <p class="title">Blog</p>
+                </a>
+            </div>
+            <div class="tile title-fade icon-featureccw w1 h1">
+                <a class="link" target="_blank" href="http://foothillsolutions.com/">
+                    <div class="text">
+                        <p class="text-medium">
+                            More at
+                        </p>
+                        <p>
+                            FoothillSolutions
+                        </p>
+                    </div>
+                    <p class="title"><i class="fa fa-arrow-right fa-2x"></i></p>
+                </a>
+            </div>
+            <!-- /SECTION TILES -->
+
+        </section>
+        <!-- /SECTION -->
+        <!-- SECTION -->
+        <section class="clearfix section" id="services">
+
+            <!-- SECTION TITLE -->
+            <h3 class="block-title">Services</h3>
+            <!-- /SECTION TITLE -->
+            <!-- SECTION TILES -->
+            <div class="tile reveal-slide transparent title-indent icon-flip w2 h1">
+                <div class="reveal white w2 h1">
+                    <div class="text">
+                        <p>
+                            <span class="text-medium">Development</span><br />
+                            I have experianve in frontend ASP.Net development. More specifically the ASP.Net MVC framework and KendoUi
+                        </p>
+                    </div>
+                </div>
+                <a class="link" href="#">
+                    <i class="fa fa-windows"></i>
+                    <p class="title">Development</p>
+                </a>
+            </div>
+
+            <div class="tile reveal-slide transparent title-indent icon-flip w2 h1">
+                <div class="reveal white w2 h1">
+                    <div class="text">
+                        <p>
+                            <span class="text-medium">Translation</span><br />
+                            I speak fluent English and Arabic and have been translating professionally since 2008.<br />
+                            I can also inturpert (direct translation)
+                        </p>
+                    </div>
+                </div>
+                <a class="link" href="#">
+                    <i class="fa fa-pencil"></i>
+                    <p class="title">Translation</p>
+                </a>
+            </div>
+
+            <div class="tile reveal-slide transparent title-indent icon-flip w2 h1">
+                <div class="reveal white w2 h1">
+                    <div class="text">
+                        <p>
+                            <span class="text-medium">Project Managment</span><br />
+                            I have been managing projects since I was 19. From events to outsourcing internationally I have done it all.
+                        </p>
+                    </div>
+                </div>
+                <a class="link" href="#">
+                    <i class="fa fa-group"></i>
+                    <p class="title">Project Managment</p>
+                </a>
+            </div>
+
+            <div class="tile reveal-slide transparent title-indent icon-flip w2 h1">
+                <div class="reveal white w2 h1">
+                    <div class="text">
+                        <p>
+                            <span class="text-medium">Free Hugs</span><br />
+                            I am always here for a Hug.
+                        </p>
+                    </div>
+                </div>
+                <a class="link" href="#">
+                    <i class="fa fa-youtube-play"></i>
+                    <p class="title">Free Hugs</p>
+                </a>
+            </div>
+            <!-- /SECTION TILES -->
+
+        </section>
+        <!-- /SECTION -->
+        <!-- SECTION -->
+        <section class="clearfix section" id="about">
+
+            <!-- SECTION TITLE -->
+            <h3 class="block-title">About</h3>
+            <!-- /SECTION TITLE -->
+            <!-- SECTION TILES -->
+            <div class="tile imagetile imagetile-scaleup w2 h2">
+                <a class="link" href="#">
+                    <img src="img/TM meeting 31st May 2011 01.jpg" alt="User Profile" />
+                </a>
+            </div>
+
+            <div class="tile black htmltile w3 h4">
+                <div class="tilecontent">
+                    <div class="content">
+                        <div class="pull-right">
+                            <a class="fa fa-pencil"></a>
+                        </div>
+                        <h3>Ryan Alfaddaghi</h3>
+                        <h4 class="muted">Web Developer & Translator</h4>
+                        <br />
+
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <address>
+                                    <strong>FoothilSolutions</strong><br>
+                                    2235 Auto Centre Drive<br>
+                                    Glendora, CA 917400<br><br />
+                                    <abbr title="Phone" class="fa fa-phone"></abbr>&nbsp; (966) 548 86 2005<br />
+                                    <a href="mailto:R.alfaddaghi@gmail.com" class="fa fa-envelope">&nbsp; R.alfaddaghi@gmail.com</a>
+                                </address>
+                            </div>
+                        </div>
+
+                        <p>
+                            Currently working as a front end developer, creating interfaces for portals that people much smatter than me wire up and do amazing things with.
+                        </p>
+
+                        <br />
+
+                        <ul>
+                            <li>
+                                <strong>Web Design </strong>
+                                <span class="muted">80%</span>
+                                <div class="progress progress-dark active slim">
+                                    <div class="progress-bar progress-gray" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>HTML/CSS </strong>
+                                <span class="muted">95%</span>
+                                <div class="progress progress-dark  active slim">
+                                    <div class="progress-bar progress-gray" style="width: 95%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>JavaScript </strong>
+                                <span class="muted">30%</span>
+                                <div class="progress progress-dark active slim">
+                                    <div class="progress-bar progress-gray" style="width: 30%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Graphic Design</strong>
+                                <span class="muted">60%</span>
+                                <div class="progress progress-dark active slim">
+                                    <div class="progress-bar progress-gray" style="width: 60%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Translation </strong>
+                                <span class="muted">80%</span>
+                                <div class="progress progress-dark active slim">
+                                    <div class="progress-bar progress-gray" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <br />
+
+                        <blockquote>
+                            <p>Professional and Fun to work with.</p>
+                            <small>If I dont say so myself <cite title=""></cite></small>
+                        </blockquote>
+
+                        <br />
+
+                        <p>
+                            Very eager to learn and get those bars up there to 99%. I believe that learning never ends and one should always push to increase their knowledge. Especially where they the least comfortable.
+                        </p>
+
+
+                        <br /><br />
+
+                        <ul class="list-inline">
+                            <li class="transparent-hover"><a class="fa fa-linkedin fa fa-2x" href="http://www.linkedin.com/pub/ryan-alfaddaghi/78/328/61a"></a></li>
+                            <li class="transparent-hover"><a class="fa fa-twitter fa fa-2x" href="https://twitter.com/RyanAlfaddaghi"></a></li>
+                            <li class="transparent-hover"><a class="fa fa-bold fa fa-2x" href="http://robertsouls.blogspot.com/"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /SECTION TILES -->
+
+        </section>
+        <!-- /SECTION -->
+        <!-- SECTION -->
+        <!--Portfolio Was here-->
+        <!-- /SECTION -->
+        <!-- SECTION -->
+        <!--Gallery was here-->
+        <!-- /SECTION -->
+        <!-- SECTION -->
+        <!--Blog was here-->
+        <!-- /SECTION -->
+        <!-- SECTION -->
+        <section class="clearfix section" id="contactform">
+
+            <!-- SECTION TITLE -->
+            <h3 class="block-title">Contact</h3>
+            <!-- /SECTION TITLE -->
+            <!-- SECTION TILES -->
+            <div class="tile black htmltile w3 h4">
+                <div class="tilecontent">
+                    <div class="content">
+
+                        <div class="hide textcenter" id="messagesuccess">
+                            <br /><br /><br />
+                            <h1>Thank you! <a class="fa fa-envelope"></a></h1>
+                            <br /><br /><br />
+                            <h3>Your message has been sent.</h3>
+                            <br /><br /><br /><br /><br />
+                        </div>
+
+                        <div id="messageload" class="hide textcenter">
+                            <h3>Sending</h3><br />
+                            <img src="img/preloader.gif" alt="..." />
+                        </div>
+
+                        <form id="contactme" class="form-dark" name="cform" method="post" action="mail.php">
+                            <div class="form-group">
+                                <span class="hideme label-danger firstname-missing pull-right">First name is missing!</span>
+                                <label for="firstname">First Name </label>
+                                <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Your First Name">
+                            </div>
+                            <div class="form-group">
+                                <span class="hideme label-danger lastname-missing pull-right">Last name is missing!</span>
+                                <label for="lastname">Last Name </label>
+                                <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Your Last Name">
+                            </div>
+                            <div class="form-group">
+                                <span class="hideme label-danger email-missing pull-right">Email is missing!</span>
+                                <label for="email">Email Address </label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Your Email">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <select id="subject" name="subject" class="form-control">
+                                    <option value="service">General Customer Service</option>
+                                    <option value="suggestions">Suggestions</option>
+                                    <option value="product">Services</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="label label-danger message-missing pull-right hideme">Message is missing!</span>
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" class="form-control" rows="4"></textarea>
+                            </div>
+
+                            <div class="row-fluid">
+                                <button type="submit" class="btn btn-primary btn-block pull-right">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /SECTION TILES -->
+
+        </section>
+        <!-- /SECTION -->
+    </section>
+    <!-- /MAIN CONTENT SECTION -->
+    <!-- LOCKSCREEN -->
+    <section class="mlightbox" id="lockscreen">
+        <div id="lockscreen-content">
+            <img src="img/logo.png" height="109" width="140" id="locklogo" alt="Metromega" />
+            <br /><br />
+            <img src="img/preloader.gif" id="lockloader" alt="Loading.." />
+        </div>
+    </section>
+    <!-- /LOCKSCREEN -->
+    <!-- SIDEBAR -->
+    <div id="opensidebar"><i class="fa fa-3x">+</i></div>
+    <section id="sidebar">
+        <ul>
+            <li></li>
+            <li><a data-scroll="scrollto" href="#start"><i class="fa fa-windows fa fa-4x"></i></a></li>
+            <li><a data-scroll="scrollto" href="#services"><i class="fa fa-pencil fa fa-4x"></i></a></li>
+            <li><a data-scroll="scrollto" href="#about"><i class="fa fa-user fa fa-4x"></i></a></li>
+            <!--<li><a data-scroll="scrollto" href="#portfolio"><i class="fa fa-picture-o fa fa-4x"></i></a></li>
+            <li><a data-scroll="scrollto" href="#articles"><i class="fa fa-file-text fa fa-4x"></i></a></li>-->
+            <li><a data-scroll="scrollto" href="#contactform"><i class="fa fa-envelope fa fa-4x"></i></a></li>
+        </ul>
+    </section>
+    <!-- /SIDEBAR -->
+    <!-- PRELOADER -->
+    <section class="mlightbox" id="loader">
+        <a href="#">
+            <img src="img/preloader.gif" alt="Loading.." />
+        </a>
+    </section>
+    <!-- /PRELOADER -->
+    <!-- GALLERY LIGHTBOX -->
+    <section class="mlightbox" id="galleryimage">
+        <section class="mlightbox-content">
+            <img src="#" alt="" />
+        </section>
+        <section class="mlightbox-details">
+            <div class="mlightbox-description">
+                <h2 class='mlightbox-title'>Metromega</h2>
+                <p class="mlightbox-subtitle muted">by Grozav</p>
+            </div>
+            <ul class="mlist">
+                <li><a class="close-mlightbox" href="#"><i class="fa fa-arrow-left"></i> Back to Metromega</a></li>
+                <li></li>
+                <li><a target="_blank" href="#"><i class="fa fa-facebook-sign"></i> Like us on Facebook</a></li>
+                <li><a target="_blank" href="#"><i class="fa fa-twitter-sign"></i> Follow us on Twitter</a></li>
+            </ul>
+        </section>
+    </section>
+    <!-- /GALLERY LIGHTBOX -->
+    <!-- VIDEO LIGHTBOX -->
+    <section class="mlightbox" id="galleryvideo">
+        <section class="mlightbox-content">
+            <div class="fitvideo">
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/VbDZmbx474k?modestbranding=1"></iframe>
+            </div>
+        </section>
+        <section class="mlightbox-details">
+            <div class="mlightbox-description">
+                <h2 class='mlightbox-title'>Metromega</h2>
+                <p class="mlightbox-subtitle muted">by Grozav</p>
+            </div>
+            <ul class="mlist">
+                <li><a class="close-mlightbox" href="#"><i class="fa fa-arrow-left"></i> Back to Metromega</a></li>
+                <li></li>
+                <li><a target="_blank" href="#"><i class="fa fa-facebook-sign"></i> Like us on Facebook</a></li>
+                <li><a target="_blank" href="#"><i class="fa fa-twitter-sign"></i> Follow us on Twitter</a></li>
+            </ul>
+        </section>
+    </section>
+    <!-- /VIDEO LIGHTBOX -->
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> <!-- jQuery Library -->
+    <script src="js/respond.min.js" type="text/javascript"></script> <!-- Responsive Library -->
+    <script src="js/jquery.isotope.min.js" type="text/javascript"></script> <!-- Isotope Layout Plugin -->
+    <script src="js/jquery.mousewheel.js" type="text/javascript"></script> <!-- jQuery Mousewheel -->
+    <script src="js/jquery.mCustomScrollbar.js" type="text/javascript"></script> <!-- malihu Scrollbar -->
+    <script src="js/tileshow.js" type="text/javascript"></script> <!-- Metromega Custom Tileshow Plugin -->
+    <script src="js/mlightbox.js" type="text/javascript"></script> <!-- Metromega Custom Lightbox Plugin -->
+    <script src="js/jquery.touchSwipe.min.js" type="text/javascript"></script> <!-- jQuery TouchSwipe Plugin -->
+    <script src="js/jquery.fitVids.js" type="text/javascript"></script> <!-- jQuery fitVids Plugin -->
+    <script src="js/lockscreen.js" type="text/javascript"></script> <!-- Metromega Lockscreen -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript"></script> <!-- Bootstrap Library -->
+
+    <script src="js/script.js" type="text/javascript"></script> <!-- Metromega Script -->
+
+
+</body>
 </html>
