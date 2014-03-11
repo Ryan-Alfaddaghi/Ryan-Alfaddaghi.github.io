@@ -21,21 +21,22 @@ $mail->IsSMTP();
 // 0 = off (for production use)
 // 1 = client messages
 // 2 = client and server messages
-$mail->SMTPDebug  = 0;
+$mail->SMTPDebug  = 2;
 //Ask for HTML-friendly debug output
 $mail->Debugoutput = 'html';
 //Set the hostname of the mail server
-$mail->Host       = "r.alfaddaghi@gmail.com";
+$mail->Host       = "smtp.gmail.com";
 //Set the SMTP port number - likely to be 25, 465 or 587
-$mail->Port       = 25;
+$mail->Port       = 587;
 //Whether to use SMTP authentication
+$mail->SMTPSecure = 'tls';
 $mail->SMTPAuth   = true;
 //Username to use for SMTP authentication
 $mail->Username   = "r.alfaddaghi@gmail.com";
 //Password to use for SMTP authentication
 $mail->Password   = "428107666qQ";
 //Set who the message is to be sent to
-$mail->AddAddress('r.alfaddaghi@gmail.com', 'Firstname Lastname');
+$mail->AddAddress('r.alfaddaghi@gmail.com', 'Ryan Alfaddaghi');
 //Set who the message is to be sent from
 $mail->SetFrom($email, $firstname . ' ' . $lastname);
 //Set an alternative reply-to address
